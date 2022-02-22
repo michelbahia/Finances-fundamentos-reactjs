@@ -42,7 +42,6 @@ const actWait = async (amount = 0): Promise<void> => {
 describe('Dashboard', () => {
   it('should be able to list the total balance inside the cards', async () => {
     const { getByTestId } = render(<App />);
-
     apiMock.onGet('transactions').reply(200, {
       transactions: [
         {
